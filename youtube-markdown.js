@@ -42,4 +42,17 @@ $(document).ready(function () {
       paragraph.append(embedded);
     }
   );
+  
+  
+  // Handle resizing
+  $( window ).resize(function() {
+    $('iframe').each(
+      function () {
+        var ratio = $(this).width() / 560;
+
+        $(this).height(ratio * 315);
+      }
+    );
+  });
+  
 });
